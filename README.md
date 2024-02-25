@@ -15,3 +15,7 @@ Filtering of users is performed based on whether the search query matches the us
 The implementation ensures that the user interface is responsive and updates in real-time as the user interacts with the search input.
 
 For more detailed information on each component and its functionality, please refer to the codebase.
+
+
+
+Google Maps Api is paid, so ive implemented it but placed nothing in place of key.
