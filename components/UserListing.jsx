@@ -60,10 +60,10 @@ const UserListing = () => {
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
-  // <Header text={"User Listing"} />
 
   return (
     <div className="bg-[#F7F9FB] w-full h-full py-1">
+      <Header text={"User Listing"} />
       <div className=" py-5 ml-1 mr-2 flex flex-wrap px-4">
         <div className="flex-col shadow font-freesans bg-white border-b border-slate-200 rounded-lg mt-[-25px] h-full w-full">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between pt-12 mx-5">
