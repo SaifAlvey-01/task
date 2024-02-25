@@ -1,9 +1,10 @@
 'use client'
+import React, {useEffect, useState} from 'react';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
 import UserProfilePage from '../../components/UserProfilePage';
+import Header from "../../components/Header"
 
-const UserProfile = () => {
+const Profile = () => {
   const router = useRouter();
   const { userId } = router.query;
   const [user, setUser] = useState(null);
@@ -26,17 +27,14 @@ const UserProfile = () => {
   }, [userId]);
 
   if (!user) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>; // or display a loading indicator
   }
 
   return (
     <div>
-      <h1>User Profile</h1>
-      <p>Name: {`${user.name.first} ${user.name.last}`}</p>
-      <p>Email: {user.email}</p>
-      {/* Display other user profile information */}
+      <UserProfilePage user={user} />
     </div>
   );
 };
 
-export default UserProfile;
+export default Profile;
